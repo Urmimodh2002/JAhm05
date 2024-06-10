@@ -1,28 +1,39 @@
-public class Student {
-    private String name;
+package employeedata;
 
-    // Constructor with no parameters
-    public Student() {
-        this.name = "Unknown";
-    }
+public class Student 
+{
 
-    // Constructor with one parameter
-    public Student(String name) {
-        this.name = name;
-    }
+		 private String name;
 
-    // Method to display the name of the student
-    public void displayName() {
-        System.out.println("Student Name: " + this.name);
-    }
+		    // Default constructor
+		    public Student() 
+		    {
+		        this.name = "Unknown";
+		    }
 
-    public static void main(String[] args) {
-        // Creating student objects
-        Student student1 = new Student();
-        Student student2 = new Student("Alice");
+		    // Parameterized constructor
+		    public Student(String name) 
+		    {
+		        this.name = name;
+		    }
 
-        // Displaying student names
-        student1.displayName();  // Output: Student Name: Unknown
-        student2.displayName();  // Output: Student Name: Alice
-    }
+		    // Getter for name
+		    public String getName() 
+		    {
+		        return name;
+		    }
+
+		    public static void main(String[] args) 
+		    {
+		    	// Creating object without passing Name
+		    	Student student1 = new Student();
+		    	System.out.println("Student Name : "+ student1.getName());
+		    	
+		    	// Creating object with passing Name
+		    	Student student2 = new Student("Radhika");
+		    	System.out.println("Student Name : "+ student2.getName());
+		    }
 }
+
+	
+
